@@ -1,0 +1,7 @@
+*.pyc
+*sqlite3
+static/
+media/
+venv/
+local_settings.py
+.sass-cache/
