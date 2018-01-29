@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Djangular Forum</title>
+  <base href="/">
+</head>
+<body>
+  <app-root></app-root>
+
+  <script type="text/javascript" src="{% static 'scripts/djangular-forum/dist/inline.bundle.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/djangular-forum/dist/polyfills.bundle.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/djangular-forum/dist/styles.bundle.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/djangular-forum/dist/vendor.bundle.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/djangular-forum/dist/main.bundle.js' %}"></script>
+</body>
+</html>
