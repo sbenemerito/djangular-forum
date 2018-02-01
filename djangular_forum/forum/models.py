@@ -34,8 +34,8 @@ class Comment(models.Model):
     content = models.TextField(max_length=250)
     posted = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    parent_post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    parent_comment = models.ForeignKey('self', on_delete=models.CASCADE, blank=True, null=True)
+    parent_post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
+    parent_comment = models.ForeignKey('self', related_name='children', on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return "{1}'s comment to [{0}]".format(self.parent_post, self.author)
